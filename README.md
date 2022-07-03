@@ -11,9 +11,9 @@ API_KEY: 위 사이트에서 발급받은 개인 API_KEY
 
 
 task:
-1.download_weather_information : rest_api로 부터 json파일 저장
-2.get_weathers                 : 로컬의 json파일로부터 dataframe 생성후 csv파일로 누적저장
-3.notify                       : webserver 에서 모니
+1.download_weather_information : rest_api로 부터 json파일 저장  
+2.get_weathers                 : 로컬의 json파일로부터 dataframe 생성후 csv파일로 누적저장  
+3.notify                       : webserver 에서 모니  
 
 
 

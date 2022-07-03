@@ -54,4 +54,7 @@ url: (60) SSL certificate problem: unable to get local issuer certificate
 3. airflow 의 timezone
 - 기본적으로 airflow 는 UTC 를 사용한다. 
 - 그렇다면 timezone을 Asia/Seoul 로 바꿔서 해결하면 되지않을까?  
-- 대답은 No 이다. 이유는 start_date timezone을 서울로바꾼다고해도 airflow 내부에서 다시 UTC 로 변환해서 진행한다. 
+- 대답은 No 이다. 이유는 start_date timezone을 서울로바꾼다고해도 airflow 내부에서 다시 UTC 로 변환해서 진행한다.
+
+4. airflow 계속 켜두어야하는데 노트북에 상당한 무리가간다. 
+- 간단한 해결책으로는 AWS EC2 에 배포하여 상시 켜두고싶은데 과금이생길까봐 살짝 두려움..

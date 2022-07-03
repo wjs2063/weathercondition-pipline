@@ -12,7 +12,6 @@ import pandas as pd
 import pendulum
 import os.path 
 #객체의 인스턴스생성 
-API_KEY="dfzooeS9k4AVavvSf%2B13z0KUc3sFYqtCcRm1ISMQJlODSzZ7%2BmgR%2FTBYr1lSpiIOHp6VSONV6iKmkmx6EsITew%3D%3D"
 
 
 weather_key={
@@ -53,7 +52,7 @@ download_weathers_information=BashOperator(
     bash_command=(
         "mkdir -p /opt/airflow/dags/events && "
         "curl -k -o '/opt/airflow/dags/events/{{ds}}-{{'{:02}'.format(execution_date.hour)}}00.json' "
-        "'https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?serviceKey=dfzooeS9k4AVavvSf%2B13z0KUc3sFYqtCcRm1ISMQJlODSzZ7%2BmgR%2FTBYr1lSpiIOHp6VSONV6iKmkmx6EsITew%3D%3D&pageNo=1&numOfRows=1000&dataType=Json&base_date={{ds_nodash}}&base_time={{'{:02}'.format(execution_date.hour) }}00&nx=55&ny=127'"
+        "'https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?serviceKey=(발급받을API_KEY)&pageNo=1&numOfRows=1000&dataType=Json&base_date={{ds_nodash}}&base_time={{'{:02}'.format(execution_date.hour) }}00&nx=55&ny=127'"
     ),
     dag=dag
 )

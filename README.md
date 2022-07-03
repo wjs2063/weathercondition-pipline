@@ -40,4 +40,6 @@ url: (60) SSL certificate problem: unable to get local issuer certificate
 해결 : curl -k 라는 옵션을 추가해서 verify 를 거치지않는형태로 만들어준다   
 
 
-2. Bash_Operator 로 json 파일을 저장하는 자동화부분에서 JSON 파트가 APPLCATION_ERROR 만 뜨게된다...  
+2. Bash_Operator 로 json 파일을 저장하는 자동화부분에서 JSON 파트가 APPLCATION_ERROR 만 뜨게된다...
+
+해결: Bash_operator 내부에 쌍따옴표  " 안에 명령어를 작성하는경우가 " 있다. curk -k -o '디렉토리경로' 그리고 '{url주소}' 를 적게될텐데 꼭 작은 따옴표로 적어주자

@@ -29,7 +29,7 @@ API --> RESTAPI
 
 
 ### Error 
-
+1. 
 url: (60) SSL certificate problem: unable to get local issuer certificate  
 [2022-07-03 03:27:54,307] {bash.py:173} INFO - More details here: https://curl.haxx.se/docs/sslcerts.html  
 [2022-07-03 03:27:54,311] {bash.py:173} INFO -   
@@ -38,3 +38,4 @@ url: (60) SSL certificate problem: unable to get local issuer certificate
 요약하자면 curl 로 해당 url 불러오는 과정에서 certificate 문제가 생겼음  SSL 인증서와 관련있어보인다.    
  
 해결 : curl -k 라는 옵션을 추가해서 verify 를 거치지않는형태로 만들어준다 
+2. Bash_Operator 로 json 파일을 저장하는 자동화부분에서 JSON 파트가 APPLCATION_ERROR 만 뜨게된다...

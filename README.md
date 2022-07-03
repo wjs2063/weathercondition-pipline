@@ -5,3 +5,9 @@
 
 API --> RESTAPI
 
+
+
+
+## USAGE 
+
+``` docker-compose up -d ```

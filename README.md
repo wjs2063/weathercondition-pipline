@@ -37,4 +37,4 @@ url: (60) SSL certificate problem: unable to get local issuer certificate
 
 요약하자면 curl 로 해당 url 불러오는 과정에서 certificate 문제가 생겼음  SSL 인증서와 관련있어보인다.    
  
-curl -k 라는 옵션을 추가해서 verify 를 거치지않는형태로 만들어준다 
+해결 : curl -k 라는 옵션을 추가해서 verify 를 거치지않는형태로 만들어준다 

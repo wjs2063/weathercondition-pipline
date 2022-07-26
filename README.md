@@ -1,5 +1,18 @@
 프로젝트 기간 2022-07-01~ ing
 
+## DB구축.zip파일 사용법 
+- 압축풀고 terminal에서 해당폴더로 진입  
+- ``` docker-compose up -d ```
+- ``` docker ps -a ``` 로  컨테이너 실행여부 확인
+- 1분후 local host  웹서버로 진입후 admin-> connection 에서 추가  conn_id : my_postgres conn_type : postgres , localhost , airflow:airflow 로 설정 
+- 그리고 DAG 실행 
+- Tableau 로 해당 DB 서버에 맞는 port 로 접속 
+- 사용자 지정 SQL 로 원하는 sql 문 작성 
+- ex )  select tm,hour,sub_city,AVG(t1h) from weather_info group by sub_city,tm,hour order by tm,hour,sub_city  ( Nan 값 또는 -999 등 이상한값이 주어지는경우는)  
+- 추후에 데이터 분석 또는 머신러닝 전에 전처리를 따로 해주어야함 
+
+
+
 # weathercondition-pipline
 기상청 공공데이터 OPEN API 를 이용한 날씨데이터 자동화 구축
 

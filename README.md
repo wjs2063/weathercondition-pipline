@@ -7,7 +7,7 @@
 - 1분후 local host  웹서버로 진입후 admin-> connection 에서 추가  conn_id : my_postgres conn_type : postgres , localhost , airflow:airflow 로 설정 
 - 그리고 DAG 실행 
 - Tableau 로 해당 DB 서버에 맞는 port 로 접속 
-- 사용자 지정 SQL 로 원하는 sql 문 작성 
+- 사용자 지정 SQL 로 원하는 sql 문 작성 (group by 보단 over( partition by 가 더 유용할수있음) 
 - ex )  select tm,hour,sub_city,AVG(t1h) from weather_info group by sub_city,tm,hour order by tm,hour,sub_city  ( Nan 값 또는 -999 등 이상한값이 주어지는경우는)  
 - 추후에 데이터 분석 또는 머신러닝 전에 전처리를 따로 해주어야함 
 

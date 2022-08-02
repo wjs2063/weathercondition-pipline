@@ -60,6 +60,8 @@ url: (60) SSL certificate problem: unable to get local issuer certificate
 요약하자면 curl 로 해당 url 불러오는 과정에서 certificate 문제가 생겼음  SSL 인증서와 관련있어보인다.    
  
 해결 : curl -k 라는 옵션을 추가해서 verify 를 거치지않는형태로 만들어준다   
+    : 또는 송신 -> 수신 측에서 http요청 -> 수신(비암호화) 로 바꿈 즉 http 요청을 하는것  즉 해당소스코드에서 https:-> http 로 바꾸고 verify 옵션없애줌 
+
 
 
 2. Bash_Operator 로 json 파일을 저장하는 자동화부분에서 JSON 파트가 APPLCATION_ERROR 만 뜨게된다...
